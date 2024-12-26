@@ -59,7 +59,11 @@ router.get('/scrape', async (req, res) => {
     res.json(paginatedData);
   } catch (error) {
     console.error('Scraping error:', error);
-    res.status(500).json({ error: 'Failed to scrape data' });
+    res.status(500).json({ 
+      error: 'Failed to scrape data',  
+      message: error.message,
+      stack: error.stack, 
+    });
   }
 });
 
