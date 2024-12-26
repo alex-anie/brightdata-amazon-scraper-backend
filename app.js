@@ -1,8 +1,5 @@
-// app.js
-import 'dotenv/config'
 import express from 'express';
 import scrapeRouter from './index.js'; // Import the logic from index.js
-import process from 'node:process';
 
 const app = express();
 
@@ -10,7 +7,7 @@ const app = express();
 app.use('/api', scrapeRouter);
 
 // Set the port
-const PORT = process.env.PORT || 3000;
+const PORT = 4040;
 
 // Start the server
 app.listen(PORT, () => {
