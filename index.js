@@ -3,7 +3,6 @@ import { Router } from 'express';
 import puppeteer from 'puppeteer-core';
 import process from 'node:process';
 
-
 const router = Router();
 
 // Scraping logic using Puppeteer and BrightData
