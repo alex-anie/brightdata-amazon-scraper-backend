@@ -4,13 +4,8 @@ import cors from 'cors';
 
 const app = express();
 
-const corsOptions = {
-  origin: ['http://localhost:5173', 'https://brightdata-amazon-scraper-backend.onrender.com'], // Add your production website's URL
-  optionsSuccessStatus: 200 // For legacy browsers
-};
-
-// Use CORS with the options
-app.use(cors(corsOptions));
+// allow all origin
+app.use(cors());
 
 // Use the scrapeRouter for /api routes
 app.use('/api', scrapeRouter);
